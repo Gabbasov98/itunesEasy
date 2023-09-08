@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Главная</title>
+</head>
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="blog.html" style="display: block; margin-bottom: 20px;">
+            Блог
+        </a>
+        <a href="blog-item.html" style="display: block; margin-bottom: 20px;">
+            Блог 2
+        </a>
+        <!--        <a href="404.html" style="display: block; margin-bottom: 20px;">-->
+        <!--            404-->
+        <!--        </a>-->
+        <!--        <a href="success.html" style="display: block; margin-bottom: 20px;">-->
+        <!--            Оплата прошла успешно!-->
+        <!--        </a>-->
+        <!--        <a href="error.html" style="display: block; margin-bottom: 20px;">-->
+        <!--            Ошибка оплаты-->
+        <!--        </a>-->
+        <!--        <a href="conf.html" style="display: block; margin-bottom: 20px;">-->
+        <!--            Политика конфиденциальности-->
+        <!--        </a>-->
+        <!--        <a href="login.html" style="display: block; margin-bottom: 20px;">-->
+        <!--            Как узнать логин:-->
+        <!--        </a>-->
+        <!--        <a href="rules.html" style="display: block; margin-bottom: 20px;">-->
+        <!--            Правила возврата-->
+        <!--        </a>-->
+        <!--        <a href="yoomoney.html" style="display: block; margin-bottom: 20px;">-->
+        <!--            Завершить оплату через Yoomoney-->
+        <!--        </a>-->
+
+
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="successModal">
+            Форма успешно отправлена
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="errorModal">
+            Ошибка оплаты
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="loginModal">
+            Заполнить данные
+        </button>
+
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal__bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="modal__close _close-modal">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.32446 1.82446L14.6755 14.1755M14.6755 1.82446L2.32446 14.1755" stroke="#A58FFF" stroke-width="3" stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="success__inner">
+                <img src="img/check3.svg" alt="" class="success__check">
+                <div class="text45 bold-text">
+                    Оплата прошла успешно!
+                </div>
+                <div class="text20 dark-text bold-text">
+                    Данные карты уже отправлены на указанную вами почту.
+                </div>
+                <div class="success__nav">
+                    <a href="" class="success__btn m-btn m-btn-primary">
+                        <span>На главную</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="errorModal">
+        <div class="modal__bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="modal__close _close-modal">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.32446 1.82446L14.6755 14.1755M14.6755 1.82446L2.32446 14.1755" stroke="#A58FFF" stroke-width="3" stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="success__inner">
+                <img src="img/error.svg" alt="" class="success__check">
+                <div class="text45 bold-text">
+                    Ошибка оплаты
+                </div>
+                <div class="text20 dark-text bold-text">
+                    Пожалуйста, вернитесь на главную или попробуйте снова
+                </div>
+                <div class="success__nav">
+                    <a href="" class="success__btn m-btn m-btn-primary">
+                        <span>На главную</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal login-modal" id="loginModal">
+        <div class="modal__bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="modal__close _close-modal">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.32446 1.82446L14.6755 14.1755M14.6755 1.82446L2.32446 14.1755" stroke="#A58FFF" stroke-width="3" stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="login-modal__inner">
+                <div class="login-modal__top">
+                    <div class="text45 bold-text">
+                        Заполнить данные
+                    </div>
+                    <div class="text20 dark-text">
+                        <b>Внимательно перепроверьте введенные данные!</b> <br>
+                    Если неверно заполнить поля, то код уйдет не туда, и новый код придется приобретать отдельно
+                    </div>
+                </div>
+                <div class="modal-product">
+                    <div class="text20 dark-text bold-text">
+                        Вы покупаете
+                    </div>
+                    <div class="modal-product__wrap">
+                        <div class="modal-product__img">
+                            <img src="img/app.webp" alt="">
+                        </div>
+                        <div class="modal-product__content dark-text">
+                            <div class="text20 bold-text">
+                                ITunes Gift Card, номинал 500 руб
+                            </div>
+                            <div class="text20">
+                                Стоимость: <b>790 руб</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form action="" class="login-form">
+                    <fieldset class="fg">
+                        <label>Ваш email*</label>
+                        <input type="text" placeholder="user@name.ru">
+                    </fieldset>
+                    <fieldset class="fg">
+                        <label>Ваш номер телефона*</label>
+                        <input type="tel" placeholder="+7 999 999 99 99">
+                    </fieldset>
+                    <fieldset class="fg">
+                        <label>Ваше имя*</label>
+                        <input type="text" placeholder="username">
+                    </fieldset>
+                    <fieldset class="fg">
+                        <label>Ваш Telegram</label>
+                        <input type="text" placeholder="username">
+                    </fieldset>
+                    <button class="login-form__btn m-btn m-btn-primary">
+                        <span>Перейти к оплате</span>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--  -->
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
